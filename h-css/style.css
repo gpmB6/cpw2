@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+} /*Para abrir com as mesmas configurações em diferentes navegadores,
+zeramos a margem e o padding*/
+
+body {
+	background-color: #555;
+	text-align: center;
+}
+
+#game{
+	/*width: 150px por carta + 5 * 8 cartas por fila + 5px 
+	height: 240px por carta * 4 + 15 de espaçamento */
+	width: 1245px;
+	height: 985px;
+	border: 1px solid #111;
+	position: relative;
+	margin: 10px auto;
+	border-radius: 10px;
+	background-color: #6a6cdb;
+}
+
+.card {
+	width: 150px; /* 160px no original*/
+	height: 240px;
+	position: absolute;
+	border-radius: 10px;
+	perspective: 600px;
+}
+
+.face {
+	width: 100%;
+	height: 100%;
+	position: absolute; /* sobrepor as cartas frente e verso */
+	border-radius: 10px;
+    transition: all 1s;
+    backface-visibility: hidden;
+}
+
+.front{
+    transform: rotateY(-180deg);
+}
+
+.back{
+	background: url(../h-img/verso.jpg);
+}
+
+.flipped.back{
+    transform: rotateY(180deg);
+}
+
+.flipped.front{
+    transform: rotate(0deg);
+}
+
+.card:hover, .face.flipped{
+    box-shadow: 0 0 10px #aaa;
+}
+
+.face.flipped.match{
+	box-shadow: 0 0 10px #0f0;
+}
+
+#gameOver{
+    position: absolute;
+	top: 0;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	/*Efeito de Sombra no Resto da Image*/
+	background-color: rgba(0,0,0,0.5);
+	/*Deixa em Última Camada, Atrás das Cartas*/
+	z-index: -2;
+}
+
+#imgGameOver{
+    /*adequação ao tamanho do container*/
+    width: 40%;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+#match{
+	position: relative;
+	margin: 0 auto;
+	/*adequação ao tamanho do container
+	width: 40%;*/
+    width: 20%;
+	top: 250px;
+	z-index: -1;
+	opacity: 1;
+	transition-property: top, opacity;
+	transition-duration: 2s;
+}
+
+#cronometro {
+	position: fixed;
+	left: 0;
+	top: 0;
+
+}
+
+.resumo {
+	background-color: #7B9562;
+	text-align: center;
+	margin-left: 50px;
+}
+
+.passarinho {
+	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-right: 20px;
+	float: left;
+	width: 50%;
+	border-style: dashed;
+	border-radius: 5px;
+	width: 250px;
+	height: 450px;
+	padding: 25px;
+}
+
+.button {
+	border-radius: 5px;
+	color: rgb(129, 106, 48);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px;
+	cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(197, 164, 82);
+    color: black;
+}
+
+#pass {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	padding: 1px;
+	border-radius: 5px;
+	border-color: rgb(192, 168, 168);
+}
+
+#down {
+	position: fixed;
+	bottom: 10px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
