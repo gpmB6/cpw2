@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+	background-color: #b8b5b5;
+}
+
+h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+	color: rgb(31, 30, 30);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button {
+	border-radius: 5px;
+	color: rgb(181, 212, 204);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: teal;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 36px;
+	margin: 4px;
+	cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(1, 102, 102);
+    color: white;
+  }

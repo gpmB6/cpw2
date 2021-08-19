@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//BR"
+	"http://www.w3.org/TR/xhtml1/DTD/xhmtl1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta content="utf-8" http-equiv="encoding">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title> Jogo da Memória - EASY </title>
+	<link rel="stylesheet" type="text/css" href="e-css/style.css" />
+</head>
+<body>
+    <div id="game">
+	<div id="container">
+		<div class="card" id="card0">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+		<div class="card" id="card1">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+		<div class="card" id="card2">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+		<div class="card" id="card3">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+		<div class="card" id="card4">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+		<div class="card" id="card5">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+		<div class="card" id="card6">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+		<div class="card" id="card7">
+			<div class="face back"></div>
+			<div class="face front"></div>
+		</div>
+
+        <img id="match" src="e-img/acerto.png" />
+
+        <div id="gameOver">
+            <a href="e-resumo.html">
+				<img id="imgGameOver" src="e-img/vitoria.jpg"
+				alt="Pessoa segurando um troféu"/>
+			</a>
+        </div>
+        </div>
+
+<!--Timer-->
+
+		<div id="cronometro">
+			<h1 id="counter"> 00:00 </h1>
+		</div>
+
+<!--Ranking-->
+
+		<div id="down">
+			<h4> Ranking: </h4>
+			<ul>Cartas viradas</ul>
+			<il id="pontos"></il>
+			<ul>Tempo transcorrido</ul>
+			<il id="duracao"></il>
+		</div>
+
+
+	<script src="e-js/script.js"></script>
+</body>
+</html>
